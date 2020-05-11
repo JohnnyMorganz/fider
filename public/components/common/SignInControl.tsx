@@ -2,7 +2,7 @@ import "./SignInControl.scss";
 
 import React, { useState } from "react";
 import { SocialSignInButton, Message } from "@fider/components";
-import { device, actions, Failure, isCookieEnabled } from "@fider/services";
+import { isCookieEnabled } from "@fider/services";
 import { useFider } from "@fider/hooks";
 
 interface SignInControlProps {
@@ -14,7 +14,7 @@ interface SignInControlProps {
 export const SignInControl: React.FunctionComponent<SignInControlProps> = props => {
   const fider = useFider();
   //const [email, setEmail] = useState("");
-  const [error, setError] = useState<Failure | undefined>(undefined);
+  //const [error, setError] = useState<Failure | undefined>(undefined);
 
   /*const signIn = async () => {
     const result = await actions.signIn(email);
