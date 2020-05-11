@@ -1,6 +1,6 @@
 import "./SignInControl.scss";
 
-import React, { useState } from "react";
+import React from "react";
 import { SocialSignInButton, Message } from "@fider/components";
 import { isCookieEnabled } from "@fider/services";
 import { useFider } from "@fider/hooks";
