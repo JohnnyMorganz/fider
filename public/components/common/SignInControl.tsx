@@ -1,8 +1,8 @@
 import "./SignInControl.scss";
 
-import React, { useState } from "react";
-import { SocialSignInButton, Form, Button, Input, Message } from "@fider/components";
-import { device, actions, Failure, isCookieEnabled } from "@fider/services";
+import React from "react";
+import { SocialSignInButton, Message } from "@fider/components";
+import { isCookieEnabled } from "@fider/services";
 import { useFider } from "@fider/hooks";
 
 interface SignInControlProps {
@@ -13,10 +13,10 @@ interface SignInControlProps {
 
 export const SignInControl: React.FunctionComponent<SignInControlProps> = props => {
   const fider = useFider();
-  const [email, setEmail] = useState("");
-  const [error, setError] = useState<Failure | undefined>(undefined);
+  //const [email, setEmail] = useState("");
+  //const [error, setError] = useState<Failure | undefined>(undefined);
 
-  const signIn = async () => {
+  /*const signIn = async () => {
     const result = await actions.signIn(email);
     if (result.ok) {
       setEmail("");
@@ -27,7 +27,7 @@ export const SignInControl: React.FunctionComponent<SignInControlProps> = props 
     } else if (result.error) {
       setError(result.error);
     }
-  };
+  };*/
 
   const providersLen = fider.settings.oauth.length;
 
@@ -58,13 +58,14 @@ export const SignInControl: React.FunctionComponent<SignInControlProps> = props 
               </React.Fragment>
             ))}
           </div>
-          <p className="info">We will never post to these accounts on your behalf.</p>
+          {/*<p className="info">We will never post to these accounts on your behalf.</p>*/}
         </div>
       )}
 
-      {providersLen > 0 && <div className="c-divider">OR</div>}
+      {/*providersLen > 0 && <div className="c-divider">OR</div>*/}
 
-      {props.useEmail && (
+      {/*{props.useEmail && (
+      {false && ( 
         <div className="l-signin-email">
           <p>Enter your email address to sign in</p>
           <Form error={error}>
@@ -82,7 +83,7 @@ export const SignInControl: React.FunctionComponent<SignInControlProps> = props 
             />
           </Form>
         </div>
-      )}
+      )*/}
     </div>
   );
 };
