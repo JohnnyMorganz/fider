@@ -2,7 +2,7 @@ import "./MySettings.page.scss";
 
 import React from "react";
 
-import { Modal, Form, Button, Heading, Input, Select, SelectOption, ImageUploader } from "@fider/components";
+import { Form, Button, Heading, Input, Select, SelectOption, ImageUploader } from "@fider/components";
 
 import { UserSettings, UserAvatarType, ImageUpload } from "@fider/models";
 import { Failure, actions, Fider } from "@fider/services";
