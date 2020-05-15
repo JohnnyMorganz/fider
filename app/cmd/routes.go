@@ -125,12 +125,12 @@ func routes(r *web.Engine) *web.Engine {
 		ui.Get("/settings", handlers.UserSettings())
 		ui.Get("/notifications", handlers.Notifications())
 		ui.Get("/notifications/:id", handlers.ReadNotification())
-		ui.Get("/change-email/verify", handlers.VerifyChangeEmailKey())
+		//ui.Get("/change-email/verify", handlers.VerifyChangeEmailKey())
 
 		ui.Delete("/_api/user", handlers.DeleteUser())
 		ui.Post("/_api/user/regenerate-apikey", handlers.RegenerateAPIKey())
 		ui.Post("/_api/user/settings", handlers.UpdateUserSettings())
-		ui.Post("/_api/user/change-email", handlers.ChangeUserEmail())
+		//ui.Post("/_api/user/change-email", handlers.ChangeUserEmail())
 		ui.Post("/_api/notifications/read-all", handlers.ReadAllNotifications())
 		ui.Get("/_api/notifications/unread/total", handlers.TotalUnreadNotifications())
 
