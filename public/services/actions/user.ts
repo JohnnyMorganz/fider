@@ -16,7 +16,7 @@ export const changeUserEmail = async (email: string): Promise<Result> => {
   //return await http.post("/_api/user/change-email", {
   //  email
   //});
-  return await new Promise()
+  return await new Promise((resolve, reject) => reject())
 };
 
 export const deleteCurrentAccount = async (): Promise<Result> => {
