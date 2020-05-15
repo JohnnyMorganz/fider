@@ -31,9 +31,9 @@ export default class MySettingsPage extends React.Component<MySettingsPageProps,
     super(props);
     this.state = {
       showModal: false,
-      changingEmail: false,
+      //changingEmail: false,
       avatarType: Fider.session.user.avatarType,
-      newEmail: "",
+      //newEmail: "",
       name: Fider.session.user.name,
       userSettings: this.props.userSettings
     };
@@ -53,7 +53,7 @@ export default class MySettingsPage extends React.Component<MySettingsPageProps,
     }
   };
 
-  private submitNewEmail = async () => {
+  /*private submitNewEmail = async () => {
     const result = await actions.changeUserEmail(this.state.newEmail);
     if (result.ok) {
       this.setState({
@@ -76,7 +76,7 @@ export default class MySettingsPage extends React.Component<MySettingsPageProps,
       newEmail: "",
       error: undefined
     });
-  };
+  };*/
 
   private avatarTypeChanged = (opt?: SelectOption) => {
     if (opt) {
@@ -96,9 +96,9 @@ export default class MySettingsPage extends React.Component<MySettingsPageProps,
     this.setState({ showModal: false });
   };
 
-  private setNewEmail = (newEmail: string) => {
+  /*private setNewEmail = (newEmail: string) => {
     this.setState({ newEmail });
-  };
+  };*/
 
   private setAvatar = (avatar: ImageUpload): void => {
     this.setState({ avatar });
@@ -114,7 +114,7 @@ export default class MySettingsPage extends React.Component<MySettingsPageProps,
     return (
       <div id="p-my-settings" className="page container">
         <Modal.Window isOpen={this.state.showModal} onClose={this.closeModal}>
-          <Modal.Header>Confirm your new email</Modal.Header>
+          {/*<Modal.Header>Confirm your new email</Modal.Header>
           <Modal.Content>
             <div>
               <p>
@@ -128,7 +128,7 @@ export default class MySettingsPage extends React.Component<MySettingsPageProps,
               </p>
             </div>
           </Modal.Content>
-        </Modal.Window>
+        </Modal.Window>*/}
 
         <Heading title="Settings" subtitle="Manage your profile settings" icon={FaRegAddressCard} />
 
@@ -138,17 +138,16 @@ export default class MySettingsPage extends React.Component<MySettingsPageProps,
               <Input
                 label="Email"
                 field="email"
-                value={this.state.changingEmail ? this.state.newEmail : Fider.session.user.email}
+                value={Fider.session.user.email}
                 maxLength={200}
                 disabled={true}
-                onChange={this.setNewEmail}
               >
                 <p className="info">
                   {Fider.session.user.email || this.state.changingEmail
                     ? "Your email is private and will never be publicly displayed."
                     : "Your account doesn't have an email."}
                 </p>
-                {this.state.changingEmail && (
+                {/*this.state.changingEmail && (
                   <>
                     <Button color="positive" size="mini" onClick={this.submitNewEmail}>
                       Confirm
@@ -157,7 +156,7 @@ export default class MySettingsPage extends React.Component<MySettingsPageProps,
                       Cancel
                     </Button>
                   </>
-                )}
+                )*/}
               </Input>
 
               <Input label="Name" field="name" value={this.state.name} disabled={true} maxLength={100} onChange={this.setName} />
