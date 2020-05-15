@@ -2,7 +2,7 @@ import { http, Result } from "@fider/services/http";
 import { UserSettings, UserAvatarType, ImageUpload } from "@fider/models";
 
 interface UpdateUserSettings {
-  name: string;
+  //name: string;
   avatar?: ImageUpload;
   avatarType: UserAvatarType;
   settings: UserSettings;
