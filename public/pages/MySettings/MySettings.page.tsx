@@ -41,7 +41,7 @@ export default class MySettingsPage extends React.Component<MySettingsPageProps,
 
   private confirm = async () => {
     const result = await actions.updateUserSettings({
-      name: this.state.name,
+      //name: this.state.name,
       avatarType: this.state.avatarType,
       avatar: this.state.avatar,
       settings: this.state.userSettings
@@ -105,11 +105,11 @@ export default class MySettingsPage extends React.Component<MySettingsPageProps,
   };
 
   public render() {
-    const changeEmail = (
+    /*const changeEmail = (
       <span className="ui info clickable" onClick={this.startChangeEmail}>
         change
       </span>
-    );
+    );*/
 
     return (
       <div id="p-my-settings" className="page container">
