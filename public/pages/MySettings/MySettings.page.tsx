@@ -30,7 +30,7 @@ export default class MySettingsPage extends React.Component<MySettingsPageProps,
   constructor(props: MySettingsPageProps) {
     super(props);
     this.state = {
-      showModal: false,
+      //showModal: false,
       //changingEmail: false,
       avatarType: Fider.session.user.avatarType,
       //newEmail: "",
@@ -92,9 +92,9 @@ export default class MySettingsPage extends React.Component<MySettingsPageProps,
     this.setState({ userSettings });
   };
 
-  private closeModal = () => {
+  /*private closeModal = () => {
     this.setState({ showModal: false });
-  };
+  };*/
 
   /*private setNewEmail = (newEmail: string) => {
     this.setState({ newEmail });
