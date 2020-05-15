@@ -140,8 +140,7 @@ export default class MySettingsPage extends React.Component<MySettingsPageProps,
                 field="email"
                 value={this.state.changingEmail ? this.state.newEmail : Fider.session.user.email}
                 maxLength={200}
-                disabled={!this.state.changingEmail}
-                afterLabel={this.state.changingEmail ? undefined : changeEmail}
+                disabled={true}
                 onChange={this.setNewEmail}
               >
                 <p className="info">
@@ -161,7 +160,7 @@ export default class MySettingsPage extends React.Component<MySettingsPageProps,
                 )}
               </Input>
 
-              <Input label="Name" field="name" value={this.state.name} maxLength={100} onChange={this.setName} />
+              <Input label="Name" field="name" value={this.state.name} disabled={true} maxLength={100} onChange={this.setName} />
 
               <Select
                 label="Avatar"
