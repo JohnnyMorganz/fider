@@ -12,12 +12,12 @@ import { APIKeyForm } from "./components/APIKeyForm";
 import { DangerZone } from "./components/DangerZone";
 
 interface MySettingsPageState {
-  showModal: boolean;
+  //showModal: boolean;
   name: string;
-  newEmail: string;
+  //newEmail: string;
   avatar?: ImageUpload;
   avatarType: UserAvatarType;
-  changingEmail: boolean;
+  //changingEmail: boolean;
   error?: Failure;
   userSettings: UserSettings;
 }
