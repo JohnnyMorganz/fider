@@ -143,7 +143,7 @@ export default class MySettingsPage extends React.Component<MySettingsPageProps,
                 disabled={true}
               >
                 <p className="info">
-                  {Fider.session.user.email || this.state.changingEmail
+                  {Fider.session.user.email
                     ? "Your email is private and will never be publicly displayed."
                     : "Your account doesn't have an email."}
                 </p>
