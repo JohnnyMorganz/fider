@@ -54,7 +54,7 @@ func routes(r *web.Engine) *web.Engine {
 
 	r.Post("/_api/tenants", handlers.CreateTenant())
 	r.Get("/_api/tenants/:subdomain/availability", handlers.CheckAvailability())
-	//r.Get("/signup", handlers.SignUp())
+	r.Get("/signup", handlers.SignUp())
 	r.Get("/oauth/:provider", handlers.SignInByOAuth())
 	r.Get("/oauth/:provider/callback", handlers.OAuthCallback())
 
@@ -78,7 +78,7 @@ func routes(r *web.Engine) *web.Engine {
 	}
 
 	r.Get("/-/ui", handlers.Page("UI Toolkit", "A preview of Fider UI elements", "UIToolkit.page"))
-	//r.Get("/signup/verify", handlers.VerifySignUpKey())
+	r.Get("/signup/verify", handlers.VerifySignUpKey())
 	r.Get("/signout", handlers.SignOut())
 	r.Get("/oauth/:provider/token", handlers.OAuthToken())
 	r.Get("/oauth/:provider/echo", handlers.OAuthEcho())
