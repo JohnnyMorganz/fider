@@ -84,10 +84,6 @@ export default class MySettingsPage extends React.Component<MySettingsPageProps,
     }
   };
 
-  private setName = (name: string) => {
-    this.setState({ name });
-  };
-
   private setNotificationSettings = (userSettings: UserSettings) => {
     this.setState({ userSettings });
   };
@@ -159,7 +155,7 @@ export default class MySettingsPage extends React.Component<MySettingsPageProps,
                 )*/}
               </Input>
 
-              <Input label="Name" field="name" value={this.state.name} disabled={true} maxLength={100} onChange={this.setName} />
+              <Input label="Name" field="name" value={this.state.name} disabled={true} maxLength={100} />
 
               <Select
                 label="Avatar"
