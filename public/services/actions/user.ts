@@ -2,7 +2,7 @@ import { http, Result } from "@fider/services/http";
 import { UserSettings, UserAvatarType, ImageUpload } from "@fider/models";
 
 interface UpdateUserSettings {
-  name: string;
+  //name: string;
   avatar?: ImageUpload;
   avatarType: UserAvatarType;
   settings: UserSettings;
@@ -13,9 +13,10 @@ export const updateUserSettings = async (request: UpdateUserSettings): Promise<R
 };
 
 export const changeUserEmail = async (email: string): Promise<Result> => {
-  return await http.post("/_api/user/change-email", {
-    email
-  });
+  //return await http.post("/_api/user/change-email", {
+  //  email
+  //});
+  return await new Promise((resolve, reject) => reject())
 };
 
 export const deleteCurrentAccount = async (): Promise<Result> => {

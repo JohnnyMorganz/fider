@@ -98,7 +98,7 @@ func UpdateUserSettings() web.HandlerFunc {
 				Folder: "avatars",
 			},
 			&cmd.UpdateCurrentUser{
-				Name:       input.Model.Name,
+				//Name:       input.Model.Name,
 				Avatar:     input.Model.Avatar,
 				AvatarType: input.Model.AvatarType,
 			},
